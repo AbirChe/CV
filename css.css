@@ -1,0 +1,511 @@
+@font-face {
+    font-family: "CinzelDecorative-Regular";
+    src: url("/font/CinzelDecorative-Regular.otf") format("truetype"),
+          
+   }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'CinzelDecorative-Regular';
+}
+
+.body{       /*background color */
+   background:  #8D6262;
+}
+
+.resume{           /*fenetre*/
+    width: 1200px;
+    background: #fff;
+    margin: 25px auto;
+    display: flex;
+}
+
+
+.nev{                 /*nev  size colare*/
+    background: #393232;
+    width: 250px;
+    padding : 0 20px;
+
+}
+
+.right{            /*right*/
+    width: calc(100% - 250px);
+}
+                     /*nev photo*/
+.nev .img_holder{
+    text-align: center;
+    padding: 20px 0;
+    line-height: 60vh;
+    width: 100%;
+    height: 100%;
+    
+}
+                                            /* photo agrandi au passage de la sourie*/
+.nev .img_holder img {
+    width : 200px;
+    border-radius: 30px;
+    position: absolute;
+    top: 60px;
+    left: 90px;
+
+
+    -webkit-transition: all 1s ease; 
+    transition: all 1s ease;
+}
+.zoom {
+    width: 320px;
+    height: 240px;
+}
+
+    .nev .img_holder:hover img {
+        -webkit-transform:scale(2);
+        transform:scale(2);
+
+    }
+
+                                               /*contacte size colore */ 
+.pb{
+    padding-bottom: 20px;
+}
+
+.nev .icon{
+    font-size: 20px;
+    color: #ED8D8D;
+}
+
+.nev .text{
+    color: #ED8D8D;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.contact .li_warp{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .li_warp .icon{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.contact .li_warp .text{
+    width: calc(100% - 50px);
+    word-break: break-word;
+    color: #fff;
+}
+                                  /*hearder size*/
+.header{
+    background: #393232;
+    padding: 15px 30px;
+    color: #fff;
+    height: 240px;
+}
+                           /*titre dans header size color dimension*/
+.header .name{
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ED8D8D;
+    
+}
+                        /*petite parghraphe dans heade size color option dimension */
+.header .about{
+
+    margin-top: 20px;
+    line-height: 26px;
+
+    color:white ;
+    font-family: sans-serif;
+    text-align: center;
+}
+                                 /*phrase ecrire lui meme avec js*/
+span{
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+span.fade {
+    opacity: 1;
+}
+ 
+
+
+                           /*section dimension */
+.section{
+  
+   color: #fff;
+   margin: 0;
+    padding: 0;
+    
+    justify-content: center;
+    min-height:70vh;
+    font-family: 'Poppins',sans-serif;
+    background: #ED8D8D;
+   
+}
+
+                   /* bare nav dans heade dimension */
+
+nav{
+    position: relative;
+    margin: 0 auto 0;
+    width: 590px;
+    height: 50px;
+    background: #8D6262;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+
+
+}
+
+nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+
+
+    font-family: 'Open Sans ',sans-serif;
+}
+
+
+a:nth-child(1){
+    width: 190px;
+}
+
+
+
+a:nth-child(2){
+    width: 200px;
+
+}
+
+a:nth-child(3){
+    width: 190px;
+}
+
+a:hover{
+    color: #f0c330;
+    transition: 0.5s;
+}
+
+
+
+                                   /*footer dimension*/ 
+.container-fot{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin:0;
+    padding: 0;
+}
+
+
+.footer{
+    background: #4D4545;
+   padding: 40px 0;
+    color: rgb(216, 204, 204);
+   
+   
+}                    /*footer list dimension*/
+.footer-col{
+    width: 40%;
+    padding: 0 15px;
+ }
+ .footer-col h4{
+	font-size: 20px;
+	color: #0f0f0f;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+    
+ }
+
+ .footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #69233a;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+                            /*page formation*/
+.body-for{
+   
+   font-size: 14px;
+   line-height: 20px;
+   margin: 50px auto;
+   padding: 30px 200px;
+   background-image: url(for.jpg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+                         /*Une ligne horizontale*/
+.for-item{
+    padding: 20px 0;
+    border-bottom: 1px solid #0a0711;
+
+}                     /*titre de page formation dimension*/
+
+.titre .titre-for{
+    font-size: 50px;
+    color: #26252d;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+.page .title-for{
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    color: #232469;
+    position: relative;
+    text-align: right;
+    margin-bottom: 15px;
+    
+}
+
+
+.page .title-for:before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background:#232469;
+}                       
+.hope .page .title-for{
+    margin-top: 30px;
+}
+                                /*dimension de  1 ere parti de les information dans page formation */
+.data-for{
+    display: flex;
+}
+
+.data-for .date{
+    font-weight: bold;
+  
+    padding-right: 37px;
+    width: 115px;
+    position: relative;
+}
+
+.data-for .content-for{
+    font-size: 20px;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100% - 115px);
+}
+
+.data-for .date:before{
+content: "";
+position: absolute;
+top: 5px;
+right: 0;
+width: 10px;
+height: 10px;
+background: #fff;
+border: 1px solid #26252d;
+border-radius: 50%;
+}
+
+.data-for .date:after{
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #22151c;
+}
+
+.data-for:last-child .date:after{
+    display: none;
+}
+                                    
+                               /*dimension de  2 eme parti de les information dans page formation */
+.hope-for{
+    font-size: 20px;
+    padding-left:20px;
+    margin-bottom: 20px;
+    width: calc(100% - 115px);
+    line-height: 40px;
+
+}
+
+.hope .page .title-for{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    color: #232469;
+    position: relative;
+    text-align: right;
+    margin-bottom: 15px;
+    
+}                                /*page competence*/
+.body-com{
+    padding: 0;
+    font-family: sans-serif;
+}
+                           /*dimension de page competence*/
+.body-com{
+    padding: 30px 200px;
+    font-size: 14px;
+   line-height: 20px;
+   margin: 50px auto;
+  text-transform: uppercase;
+  background-image: url(com.jpg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+  
+}
+                         /* Une ligne horizontale*/
+.com-item{
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+
+}
+                     /*titre dans l'entete de page*/
+.titre .titre-com{
+    font-size: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+                       /*dimension de les information dans page comptence*/
+h1{
+    text-align: center;
+    color: #fff;
+}
+
+.main-com{
+    margin-top: 10%;
+}
+.main-com h3{
+    margin-bottom: 5px;
+    margin-left: 25%;
+   color: #fff;
+}
+
+.container-com{
+    width: 50%;
+    background-color: #D2D7D3;
+    margin-left: 25%;
+    border-radius: 5px;
+}
+
+.skills{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+}
+                                        /*dimension de la fome de %  */
+.html{width: 70%; background-color: #393232;}
+.css{width: 50%;background-color: #393232;}
+.js{width: 30%;background-color: #393232;}
+.php{width: 5%;background-color: #393232;}
+.python{width: 10%;background-color: #393232;}
+
+                                              /*page de exprience*/
+
+    .body-exp{                              /*dimension de page*/
+        padding: 30px 200px;
+        font-size: 14px;
+       line-height: 20px;
+       margin: 50px auto;
+      text-transform: uppercase;
+      color: #000;
+      background-image: url(exp.jpg);
+   background-repeat: no-repeat;
+   background-size: 100%;
+  
+      
+    }
+    
+    .exp-item{                                 /*Une ligne horizontale*/
+        padding: 20px 0;
+        border-bottom: 1px solid #000;
+    
+    }
+                                             /*titre de l'entete de page*/
+    .titre .titre-exp{
+        font-size: 50px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 4px;
+    }
+    
+    
+                                   /*dimension de les information de page comptence*/
+   
+    .hope-exp{
+        font-size: 17pxpx;
+        
+        margin-bottom: 20px;
+        width: calc(100% - 115px);
+        line-height: 40px;
+    
+    }
+                                        /*dimension de titre de les information*/
+    .page .title-exp{
+       font-size: 19px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding-bottom: 10px;
+        color: #232469;
+        position: relative;
+        text-align: right;
+        margin-bottom: 15px;
+        
+    }
+    
+    
+    .page .title-exp:before{
+        content: "";
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 60px;
+        height: 3px;
+        background:#232469;}
